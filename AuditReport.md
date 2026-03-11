@@ -351,6 +351,8 @@ Add a validation check:
 require(validator != address(0), "ZeroAddress");
 ```
 
+### Resolution
+Fixed
 
 
 ## L-02: Governance Proposal Execution Has No Timelock
@@ -368,7 +370,8 @@ Without a timelock, users have **no reaction window** to respond to potentially 
 
 Introduce a mandatory execution delay of **24–48 hours** between proposal passage and execution.
 
-
+### Resolution
+Fixed
 
 ## L-03: No Cap on Validator Count Allows Unbounded Registry Growth
 
@@ -391,7 +394,8 @@ MAX_VALIDATORS
 
 and revert when the registry limit would be exceeded.
 
-
+### Resolution
+Acknowledged
 
 ## L-04: `claimRewards()` Does Not Revert on Zero Reward Balance
 
@@ -411,7 +415,8 @@ Add a check:
 ```solidity
 require(rewardAmount > 0, "NoRewardsToClaim");
 ```
-
+### Resolution
+Acknowledged
 
 
 ## L-05: Staking Contract Does Not Validate Minimum Deposit Amount
@@ -429,7 +434,8 @@ These dust positions increase storage usage and complicate accounting without pr
 
 Introduce a minimum deposit threshold and revert when the amount is below it.
 
-
+### Resolution
+Acknowledged
 
 ## L-06: `settleEpoch()` Can Be Called Multiple Times in the Same Epoch
 
@@ -452,7 +458,8 @@ require(
     "EpochNotFinished"
 );
 ```
-
+### Resolution
+Acknowledged
 
 ## L-07: `removeValidator()` Does Not Emit an Event
 
@@ -473,6 +480,8 @@ Add and emit an event:
 event ValidatorRemoved(address indexed validator, uint256 timestamp);
 ```
 
+### Resolution
+Fixed
 
 # Disclaimer
 This report is for informational purposes only and does not constitute legal, financial, or investment advice. Findings reflect the state of the code at the time of review and are based solely on manual analysis of the in-scope contracts. No guarantee is made that all vulnerabilities have been identified. The auditor assumes no liability for any losses, and the protocol team is responsible for implementing and verifying all remediations prior to deployment.
