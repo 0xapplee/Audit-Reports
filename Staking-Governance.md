@@ -60,7 +60,7 @@ This report is provided under strict NDA and reflects the state of the codebase 
 |-------|-----------------------------------------------------------------------|-------------------|----------|
 | H-01  | Staker Can Deflate Governance Quorum by Unstaking After Voting       | Governance        | **High**   |
 | H-02  | Governance Voting Power Read from Live Balance Enables Flash-Stake Takeover | Governance        | **High**   |
-| H-03  | Fee Share Calculation Overmints Shares to Fee Recipient on Every Accrual | StakingMath       | **High**   |
+| H-03  | Reward Per Share Calculated Against Post-Deposit Supply Dilutes Existing Staker Rewards | StakingMath       | **High**   |
 | M-01  | Removed Validators Can Still Claim Accrued Staking Rewards           | RewardDistributor | **Medium** |
 | M-02  | Reward Rate Miscalculated When New Rewards Added Before Distribution Ends | RewardDistributor | **Medium** |
 | M-03  | Protocol Loses Accumulated Fees During Epoch Reward Distribution     | StakingPool       | **Medium** |
